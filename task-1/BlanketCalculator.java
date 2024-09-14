@@ -5,7 +5,7 @@ public class BlanketCalculator{
         System.out.println(howManyItems(100D, 2D, 2D));
     }
 
-    public static int howManyItems(double clothSize, double w, double h){
+    private static int howManyItems(double clothSize, double w, double h){
         int maxHalves;
 
         maxHalves = (int)(clothSize / (w * h));
