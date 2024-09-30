@@ -1,6 +1,4 @@
 import java.util.Arrays;
-import java.util.Set;
-import java.util.HashSet;
 public class TaskTwo{
     
     public static void main(String[] args){
@@ -12,22 +10,10 @@ public class TaskTwo{
         System.out.println(getInitials("simonov sergei evgenievich"));
         System.out.println(getInitials("kozhevnikova tatiana vitalevna"));
         System.out.println("4:");
-        float[] taskFourFirst = normalizator(new float[]{3.5f, 7.0f, 1.5f, 9.0f, 5.5f});
-        for(int i = 0; i < taskFourFirst.length; i++){
-            System.out.print(taskFourFirst[i] + " ");
-        }
-        System.out.println();
-        float[] taskFourSecond = normalizator(new float[]{10.0f, 10.0f, 10.0f, 10.0f});
-        for(int i = 0; i < taskFourSecond.length; i++){
-            System.out.print(taskFourSecond[i] + " ");
-        }
-        System.out.println();
+        System.out.println(Arrays.toString(normalizator(new float[]{3.5f, 7.0f, 1.5f, 9.0f, 5.5f})));
+        System.out.println(Arrays.toString(normalizator(new float[]{10.0f, 10.0f, 10.0f, 10.0f})));
         System.out.println("5:");
-        float[] taskFive = compressedNums(new float[] {1.6f, 0, 212.3f, 34.8f, 0, 27.5f});
-        for(int i = 0; i < taskFive.length; i++){
-            System.out.print(taskFive[i] + " ");
-        }
-        System.out.println();
+        System.out.println(Arrays.toString(compressedNums(new float[] {1.6f, 0, 212.3f, 34.8f, 0, 27.5f})));
         System.out.println("6:");
         System.out.println(camelToSnake("helloWorld"));
         System.out.println("7:");
