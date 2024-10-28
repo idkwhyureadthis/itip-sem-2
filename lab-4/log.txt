@@ -1,0 +1,6 @@
+an error occured: string is not a mail
+an error occured: string is not a mail
+an error occured: string is not a mail
+string is not a mail: an error occured: 20241028_174735
+20241028_175906: an error occured: string is not a mail
+2024-10-28T18:01:32.602482100+03:00[Europe/Moscow]: an error occured: string is not a mail
