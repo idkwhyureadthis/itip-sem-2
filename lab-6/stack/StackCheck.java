@@ -1,7 +1,7 @@
 package stack;
 public class StackCheck{
     public static void main(String[] args) {
-        Stack<Integer> stack = new Stack<>(10);
+        CustomStack<Integer> stack = new CustomStack<>(10);
         stack.push(1);
         stack.push(2);
         stack.push(3);
