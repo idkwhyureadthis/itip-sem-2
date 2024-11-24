@@ -9,7 +9,14 @@ public class TopWords {
         try {
             scanner = new Scanner(file);
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("error occured " + e.getMessage());
+            return;
+        } finally{
+            try{
+            scanner.close();
+            } catch (IllegalStateException e){
+                System.out.println("failed to close scanner" + e.getMessage());
+            }
         }
         Map<String, Integer> seen = new HashMap<>();
         ArrayList<String> list = new ArrayList<>();
@@ -20,21 +27,17 @@ public class TopWords {
                 seen.put(word, seen.getOrDefault(word, 0) + 1);
             }
         }
-        System.out.println(seen.toString());
         for (String word: seen.keySet()){
-            System.out.println(word);
             list.add(word);
         }
-        System.out.println(list.toString());
         Collections.sort(list, new Comparator<String>(){
             @Override
             public int compare(String s1,String s2){
                   return -seen.get(s1).compareTo(seen.get(s2));
             }
         });
-        System.out.println(list.toString());
         for(int i = 0; i < Math.min(10, list.size()); i++){
-            System.out.print(list.get(i) + " ");
+            System.out.print(list.get(i) + " : "  + seen.get(list.get(i)) + "\n");
         }
 
     }

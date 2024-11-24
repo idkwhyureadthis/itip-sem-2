@@ -3,15 +3,12 @@ package shopkeeping;
 import java.util.*;
 
 public class SoldItems {
-    private int size;
     private Map<Item, Integer> data;
     public SoldItems(){
         data = new LinkedHashMap<>();
-        size = 0;
     }
     public SoldItems(int capacity){
         data = new LinkedHashMap<>(capacity);
-        size = 0;
     }
 
     public void sell(Item key, int quantity){
@@ -36,8 +33,8 @@ public class SoldItems {
         }
     }
 
-    public long totalSellPrice(){
-        long price = 0;
+    public float totalSellPrice(){
+        float price = 0;
         for (Map.Entry<Item, Integer> entry : data.entrySet()){
             price += entry.getKey().getPrice() * entry.getValue();
         }

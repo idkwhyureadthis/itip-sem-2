@@ -12,22 +12,39 @@ public class CustomStack<T> {
         return size == 0;
     }
 
+    public int size(){
+        return size;
+    }
+
+    public void print(){
+        if(this.isEmpty()){
+            System.out.println("stack is empty");
+        }
+        for (int i = size - 1; i > 0; i--){
+            System.out.print(data[i] + " -> ");
+        }
+        System.out.println(data[0]);
+    }
+
     public boolean isFull(){
         return size == data.length;
     }
 
+        
+    public T peek() {
+        if (this.isEmpty()) return null;
+        return data[size - 1];
+    }
+
     public void push(T element) {
         if (this.isFull()) {System.out.println("stack is full");};
-        size++;
         data[size] = element;
+        size++;
     }
     public T pop() {
         if (this.isEmpty()) return null;
-        return data[size--];
-    }
-    
-    public T peek() {
-        if (this.isEmpty()) return null;
-        return data[size];
+        size--;
+        T elem = data[size];
+        return elem;
     }
 }

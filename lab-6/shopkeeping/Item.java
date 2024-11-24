@@ -2,7 +2,7 @@ package shopkeeping;
 
 public class Item {
     private String name;
-    private int price;
+    private float price;
     private String description;
 
     public void setName(String name){
@@ -13,11 +13,11 @@ public class Item {
         return name;
     }
 
-    public void setPrice(int price){
+    public void setPrice(float price){
         this.price = price;
     }
 
-    public int getPrice(){
+    public float getPrice(){
         return price;
     }
 
@@ -29,7 +29,7 @@ public class Item {
         return description;
     }
 
-    public Item(String name, int price){
+    public Item(String name, float price){
         this.name = name;
         this.price = price;
         description = "";
