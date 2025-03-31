@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="audioBook" class="com.example.AudioBook">
+        <constructor-arg value="1984" />
+        <constructor-arg value="George Orwell" />
+        <constructor-arg value="John Smith" />
+    </bean>
+
+    <bean id="musical" class="com.example.Musical">
+        <constructor-arg value="The Phantom of the Opera" />
+        <constructor-arg value="Andrew Lloyd Webber" />
+        <constructor-arg value="Cameron Mackintosh" />
+    </bean>
+
+    <bean id="movie" class="com.example.Movie">
+        <constructor-arg value="Inception" />
+        <constructor-arg value="Christopher Nolan" />
+        <constructor-arg value="Emma Thomas" />
+    </bean>
+
+</beans>

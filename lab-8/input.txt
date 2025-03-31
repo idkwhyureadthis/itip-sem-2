@@ -1,4 +1,0 @@
-some data
-another line
-data with error
-more data
