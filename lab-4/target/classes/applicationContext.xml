@@ -21,18 +21,4 @@
         <constructor-arg value="Christopher Nolan" />
         <constructor-arg value="Emma Thomas" />
     </bean>
-
-
-    <bean id="audioBookPlayer" class="com.example.Player">
-        <constructor-arg ref="audioBook"/>    
-    </bean>
-
-    <bean id="musicalPlayer" class="com.example.Player">
-       <constructor-arg ref="musical"/>
-    </bean>
-
-    <bean id="moviePlayer" class="com.example.Player">
-        <constructor-arg ref="movie"/>
-    </bean>
-    
 </beans>

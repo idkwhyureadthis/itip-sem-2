@@ -34,5 +34,4 @@
     <bean id="moviePlayer" class="com.example.Player">
         <constructor-arg ref="movie"/>
     </bean>
-    
 </beans>
