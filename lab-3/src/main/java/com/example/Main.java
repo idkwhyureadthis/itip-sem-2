@@ -25,4 +25,4 @@ public class Main {
         System.out.println(movie.start());
         System.out.println(movie.stop());
     }
-}
+}   
